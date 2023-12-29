@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Image Texture</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="rust-crumpled" src="images/rust-crumpled.jpg" />
+        <img id="rusted-plates" src="images/rusted-plates.jpg" />
+        <img id="sci-fi-fabric" src="images/sci-fi-fabric.jpg" />
+        <img id="threadplate-floor" src="images/threadplate-floor.jpg" />
+      </a-assets>
+
+      <a-box
+        position="-1 0.5 -3"
+        repeat="1 1"
+        rotation="0 45 0"
+        roughness="0.5"
+        src="#rusted-plates"
+      ></a-box>
+
+      <a-sphere
+        position="0 1.25 -5"
+        radius="1.25"
+        repeat="1 1"
+        roughness="0.5"
+        src="#rust-crumpled"
+      ></a-sphere>
+
+      <a-cylinder
+        height="1.5"
+        position="1 0.75 -3"
+        radius="0.5"
+        repeat="1 1"
+        roughness="0.5"
+        src="#sci-fi-fabric"
+      ></a-cylinder>
+
+      <a-plane
+        height="4"
+        position="0 0 -4"
+        rotation="-90 0 0"
+        repeat="1 1"
+        roughness="0.5"
+        src="#threadplate-floor"
+        width="4"
+      ></a-plane>
+
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
